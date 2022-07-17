@@ -1,6 +1,3 @@
-use 5.18.0;
-# use warnings;
-
 =begin
 This is all part of multiline comment.
 You can use as many lines as you like
@@ -159,9 +156,3 @@ print "@continents\n\n";
 @weekends=@days[5,6];
 print "@weekends";
 
-$file = "hello.pl";
-open(FH, $file);
-@lines = <FH>;
-close(FH);
-$count = @lines;
-say "$count in $file";

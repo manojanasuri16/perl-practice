@@ -16,7 +16,8 @@ foreach $_ (@array){
 }
 =cut
 
+=begin
 foreach (@array){
     say;
 }
-
+=cut
