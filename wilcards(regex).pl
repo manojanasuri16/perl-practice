@@ -117,6 +117,9 @@ else{
 
 
 #matching metacharacters
+# Regular Expression Meta Characters
+# {} [] () ^ $ . | * + ? \
+
 my $s = "This is (a line) of text";
 
 if($s =~ /(\(.*\))/){
@@ -125,3 +128,4 @@ if($s =~ /(\(.*\))/){
 else{
     say "False";
 }
+

@@ -1,6 +1,6 @@
 use 5.18.0;
 use warnings;
-
+use feature 'state'; #before perl v5.16 
 my $s = "This is a line of text";
 
 my @a = split(/\s/,$s);  #s -> whitespace
@@ -18,3 +18,5 @@ print "\n";
 my $s = "value , another : yet another , one more here";
 say foreach split(/[:,]\s*/,$s);
 print "\n";
+
+

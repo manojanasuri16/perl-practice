@@ -30,3 +30,31 @@ sub calc{
     my $b = shift;
     return $a*=$b;
 }
+
+
+
+#static variables (state)
+func();
+func();
+func();
+sub func{
+    my $n = 10;
+    say ++$n;
+}say "\n";
+
+
+fun1();
+fun1();
+fun1();
+sub fun1{
+    state $n1 = 10;  #retains its state b/w function calls
+    say ++$n1;
+}say "\n";
+
+
+#Predeclared functions
+use subs qw(func);
+func 'foo', 'bar', 'baz';
+sub func{
+    say foreach @_;
+}say "\n";

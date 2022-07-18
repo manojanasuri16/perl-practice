@@ -1,0 +1,36 @@
+=begin 
+A reference is a scalar that refers to a value
+The target value may be scalar, an array, a hash, or a function
+The reference itself is a scalar value
+create a reference with a back slash (\)
+
+references:
+$rs = \$scalar;
+$ra = \@array;
+$rh = \%hash;
+$rf = \&function;
+
+To access the target value by dereferencing using tje correct type symbol and enclosing the scalar refernce in curly brackets {}
+
+${$rs}
+@{$ra}
+%{$rh}
+&{$rf}
+
+we can also use arrow operator (->) to dereference and access structure members at the same time
+
+$ra -> [$si]
+$rh -> {key}
+$rf -> ()
+
+Anonymous Structures
+References allows the use of anonymous arrays, hashes and functions.
+This can be extremely handy for creating complex data structures.
+$r = { a => [1,2,3],
+       h => {k => 'y'},
+       f => sub { say 'foo' }
+     };
+
+To know the type of function
+ref($r) -> returns string indicating the type of refernced value
+=cut

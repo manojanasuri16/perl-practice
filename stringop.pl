@@ -15,8 +15,9 @@ say q*Hello World*;
 say q&Hello "World"&;
 
 #qq -> follows string interpolation
-say qq(Hello \n World);
+say  qq(Hello \n World);
 say "\n";
+
 #qw -> quote words operator, creates a list
 my @array = qw(this is a list of words);
 say foreach @array;
